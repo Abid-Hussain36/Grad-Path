@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import sklearn
 
 pickle_in = open("bagging_clf.pkl", "rb")
 model = pickle.load(pickle_in)
