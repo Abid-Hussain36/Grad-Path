@@ -2,6 +2,7 @@ import streamlit as st
 
 import numpy as np
 import pandas as pd
+import sklearn
 import pickle
 
 pickle_in = open("bagging_clf.pkl", "rb")
