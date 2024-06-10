@@ -2,9 +2,10 @@ import streamlit as st
 
 import numpy as np
 import pandas as pd
-import joblib
+import pickle
 
-model = joblib.load("bagging_clf.joblib")
+pickle_in = open("bagging_clf.pkl", "rb")
+model = pickle.load(pickle_in)
 
 st.title("University Student Dropout Predictor :mortar_board:")
 first_sem_credits = st.number_input("Number of Credits taken in the First Semester", 0, 20)
@@ -39,7 +40,6 @@ def predict():
         st.session_state.output = "Student is at Risk for Dropping Out"
     else:
         st.session_state.output = "Student is not at Risk for Dropping Out"
-    st.write(input_data)
 
 st.button("Predict", on_click=predict)
 st.write(st.session_state.output)
