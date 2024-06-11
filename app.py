@@ -5,7 +5,7 @@ import pandas as pd
 import sklearn
 import pickle
 
-pickle_in = open("bagging_clf.pkl", "rb")
+pickle_in = open("xgb_clf.pkl", "rb")
 model = pickle.load(pickle_in)
 
 st.title("University Student Dropout Predictor :mortar_board:")
